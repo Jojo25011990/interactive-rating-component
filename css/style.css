@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+input,
+button,
+textarea {
+  background-color: #fff;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 
+I decided that I won't add any Sass features since it is a rather small project. The bigger the project, the more features I will add. I have more projects where I try to showcase some Sass features.
+*/
+@media (max-width: 430px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #131518;
+  font-family: "Overpass", sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.card, .card__popup {
+  width: 41.2rem;
+  height: 41.6rem;
+  border-radius: 3rem;
+  padding: 3.2rem 3.6rem;
+  background: radial-gradient(#232a34, #181e27);
+}
+.card.hidden, .hidden.card__popup {
+  display: none;
+}
+.card__box {
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: #262e38;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.card__heading, .card__popup-heading {
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: normal;
+}
+.card__text, .card__popup-description {
+  color: #969fad;
+  line-height: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+.card__form-rating {
+  width: 34.3rem;
+  display: flex;
+  gap: 2.2rem;
+  margin-bottom: 3.2rem;
+}
+.card__form-rating-input {
+  display: none;
+}
+.card__form-rating-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5.1rem;
+  height: 5.1rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  background-color: #262e38;
+  color: #969fad;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+.card__form-rating-label:hover {
+  background-color: #fc7614;
+  color: #262e38;
+}
+.card__form-rating-input:checked + .card__form-rating-label {
+  background-color: #fff;
+  color: #262e38;
+}
+.card__form-btn {
+  color: #131518;
+  background-color: #fc7614;
+  border-radius: 22.5rem;
+  width: 34.1rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  font-size: inherit;
+  font-weight: bold;
+  letter-spacing: 0.02rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.card__form-btn:hover {
+  background-color: #fff;
+}
+.card__popup {
+  text-align: center;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+.card__popup.hidden {
+  display: none;
+}
+.card__popup-selected {
+  width: 19.3rem;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  background-color: #262e38;
+  color: #fc7614;
+  line-height: 3.2rem;
+  border-radius: 22.5rem;
+  margin: 3.2rem auto;
+}
+.card__popup-heading {
+  margin-bottom: 1.5rem;
+}

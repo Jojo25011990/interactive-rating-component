@@ -1,0 +1,17 @@
+{
+	"name": "interactive-rating-component-main",
+	"version": "1.0.0",
+	"description": "![Design preview for the Interactive rating component coding challenge](./design/desktop-preview.jpg)",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon -e scss -x \"npm run sass\"",
+		"sass": "sass sass/main.scss css/style.css --no-source-map"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"nodemon": "^3.1.7",
+		"sass": "^1.81.1"
+	}
+}

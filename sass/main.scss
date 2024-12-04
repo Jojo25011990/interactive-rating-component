@@ -1,0 +1,155 @@
+@forward './reset';
+
+/* 
+I decided that I won't add any Sass features since it is a rather small project. The bigger the project, the more features I will add. I have more projects where I try to showcase some Sass features.
+*/
+
+html {
+  @media (max-width: 430px) {
+    font-size: 55%;
+  }
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #131518;
+
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.card {
+  width: 41.2rem;
+  height: 41.6rem;
+  border-radius: 3rem;
+  padding: 3.2rem 3.6rem;
+
+  background: radial-gradient(#232a34, #181e27);
+
+  &.hidden {
+    display: none;
+  }
+
+  &__box {
+    width: 4.8rem;
+    height: 4.8rem;
+    background-color: #262e38;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  &__heading {
+    color: #fff;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: normal;
+  }
+
+  &__text {
+    color: #969fad;
+    line-height: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+
+  &__form {
+    &-rating {
+      width: 34.3rem;
+      display: flex;
+      gap: 2.2rem;
+      margin-bottom: 3.2rem;
+
+      &-input {
+        display: none;
+      }
+
+      &-label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5.1rem;
+        height: 5.1rem;
+        font-weight: bold;
+        font-size: 1.6rem;
+        border-radius: 50%;
+        background-color: #262e38;
+        color: #969fad;
+        cursor: pointer;
+        user-select: none;
+
+        transition: background-color 0.3s, color 0.3s;
+
+        &:hover {
+          background-color: #fc7614;
+          color: #262e38;
+        }
+      }
+
+      &-input:checked + .card__form-rating-label {
+        background-color: #fff;
+        color: #262e38;
+      }
+    }
+
+    &-btn {
+      color: #131518;
+      background-color: #fc7614;
+      border-radius: 22.5rem;
+      width: 34.1rem;
+      height: 4.5rem;
+      line-height: 4.5rem;
+      font-size: inherit;
+      font-weight: bold;
+      letter-spacing: 0.02rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #fff;
+      }
+    }
+  }
+
+  // Interactive card popup component
+
+  &__popup {
+    @extend .card;
+    text-align: center;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+
+    &.hidden {
+      display: none;
+    }
+
+    &-selected {
+      width: 19.3rem;
+      height: 3.2rem;
+      line-height: 3.2rem;
+      background-color: #262e38;
+      color: #fc7614;
+      line-height: 3.2rem;
+      border-radius: 22.5rem;
+      margin: 3.2rem auto;
+    }
+
+    &-heading {
+      @extend .card__heading;
+      margin-bottom: 1.5rem;
+    }
+
+    &-description {
+      @extend .card__text;
+    }
+  }
+
+  // End of Interactive card popup component
+}
